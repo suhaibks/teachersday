@@ -1,0 +1,119 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  font-family:Consolas, monospace;
+}
+
+.app{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  background:
+    radial-gradient(circle at center,
+    #02120a 0%,
+    #000 100%);
+}
+
+.terminal-window{
+  width:min(95vw,900px);
+  min-height:650px;
+  background:#030303;
+  border:1px solid #00ff88;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:
+    0 0 20px rgba(0,255,136,.25),
+    0 0 60px rgba(0,255,136,.08);
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 16px;
+  border-bottom:1px solid #00ff88;
+  background:#08120c;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+}
+
+.red{
+  background:#ff5f56;
+}
+
+.yellow{
+  background:#ffbd2e;
+}
+
+.green{
+  background:#27c93f;
+}
+
+.title{
+  margin-left:10px;
+  color:#7cffc0;
+  font-size:14px;
+}
+
+.terminal{
+  padding:24px;
+  color:#00ff88;
+}
+
+.line{
+  margin:10px 0;
+  font-size:clamp(14px,4vw,20px);
+}
+
+.success{
+  color:#00ff88;
+  font-weight:bold;
+  margin-top:20px;
+}
+
+.name{
+  text-align:center;
+  margin-top:25px;
+  color:#00ffff;
+  font-size:clamp(40px,10vw,72px);
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 25px #00ffff;
+}
+
+.role{
+  text-align:center;
+  color:#9ae6ff;
+  font-size:clamp(14px,4vw,22px);
+  margin-bottom:25px;
+}
+
+.footer{
+  text-align:center;
+  margin-top:30px;
+  color:#00ff88;
+  font-weight:bold;
+  font-size:clamp(18px,5vw,30px);
+  text-shadow:0 0 12px #00ff88;
+}
+
+.cursor{
+  animation:blink .8s infinite;
+}
+
+@keyframes blink{
+  50%{
+    opacity:0;
+  }
+}
